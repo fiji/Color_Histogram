@@ -25,6 +25,13 @@
 		</dependency>
 	</dependencies>
 
+	<scm>
+		<connection>scm:git:git://github.com/fiji/Color_Histogram</connection>
+		<developerConnection>scm:git:git@github.com:fiji/Color_Histogram</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/fiji/Color_Histogram</url>
+	</scm>
+
 	<repositories>
 		<!-- NB: for project parent, in case of partial checkout -->
 		<repository>
