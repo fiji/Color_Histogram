@@ -25,6 +25,11 @@
 		</dependency>
 	</dependencies>
 
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://jenkins.imagej.net/job/Color_Histogram/</url>
+	</ciManagement>
+
 	<scm>
 		<connection>scm:git:git://github.com/fiji/Color_Histogram</connection>
 		<developerConnection>scm:git:git@github.com:fiji/Color_Histogram</developerConnection>
