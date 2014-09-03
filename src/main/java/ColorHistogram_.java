@@ -193,7 +193,7 @@ class ColorHistogramWindow extends ImageWindow implements Measurements, ActionLi
         height=imp.getHeight();
         
         showHistogram(imp, nBins, 0.0, 0.0);
-        PrintResults();
+        printResults();
     }
     
     public void setup() {
@@ -341,16 +341,22 @@ class ColorHistogramWindow extends ImageWindow implements Measurements, ActionLi
         }
     }
     
-    public void PrintResults(){
-        IJ.setColumnHeadings("channel\tmean\tmode\tstd.dev.");
-        IJ.write("red\t"+ IJ.d2s(histMean[0],2) + "\t" + IJ.d2s(histModeCnt[0],0) + "\t " 
-        		+IJ.d2s(histStdev[0],2) );
-   
-         IJ.write("green\t" + IJ.d2s(histMean[1],2)+"\t" + IJ.d2s(histModeCnt[1],0) + "\t " 
-        		 +IJ.d2s(histStdev[1],2) );
-         
-         IJ.write("blue\t" + IJ.d2s(histMean[2],2)+"\t" + IJ.d2s(histModeCnt[2],0) + "\t " 
-        		 +IJ.d2s(histStdev[2],2));
+    public void printResults(){
+        ResultsTable rt = Analyzer.getResultsTable();
+        if (rt == null) {
+            rt = new ResultsTable();
+            Analyzer.setResultsTable(rt);
+        }
+        IJ.run("Clear Results", "");
+        String[] channels = {"red", "green", "blue"};
+        for (int i = 0; i < 3; i++) {
+            rt.incrementCounter();
+            rt.addValue("channel", channels[i]);
+            rt.addValue("mean", histMean[i]);
+            rt.addValue("mode", histModeCnt[i]);
+            rt.addValue("std.dev.", histStdev[i]);
+        }
+        rt.show("Results");
  }
     
   /*  
