@@ -4,21 +4,33 @@
  * Created on 09 May 2004, 21:23
  */
 
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.plugin.filter.*;
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.io.*;
-import java.awt.datatransfer.*;
-import java.awt.datatransfer.Clipboard;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.ImageWindow;
+import ij.gui.NewImage;
+import ij.measure.Measurements;
+import ij.measure.ResultsTable;
+import ij.plugin.filter.Analyzer;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
+import ij.text.TextWindow;
 
-import ij.util.*;
-import ij.measure.*;
-import ij.text.*;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionListener;
+import java.io.CharArrayWriter;
+import java.io.PrintWriter;
 
 /**
  *     @version 2.0.5 date 18 Jun 2007
