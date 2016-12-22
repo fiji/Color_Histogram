@@ -17,6 +17,7 @@
 
 	<name>plugins/Color_Histogram.jar</name>
 	<description></description>
+	<inceptionYear>2004</inceptionYear>
 
 	<scm>
 		<connection>scm:git:git://github.com/fiji/Color_Histogram</connection>
