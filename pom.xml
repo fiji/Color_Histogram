@@ -85,8 +85,8 @@
 		<url>https://github.com/fiji/Color_Histogram/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/job/Color_Histogram/</url>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/fiji/Color_Histogram</url>
 	</ciManagement>
 
 	<properties>
